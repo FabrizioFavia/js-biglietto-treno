@@ -8,13 +8,13 @@ totalPrice = totalPrice.toFixed(2);
 if (age < 18) {
     var underDiscount = (totalPrice - (totalPrice * 20 / 100));
     underDiscount = underDiscount.toFixed(2);
-    console.log(underDiscount);
+    document.getElementById("price").innerText = (`Prezzo del biglietto: €${underDiscount}`);
 }
 else if (age > 65) {
     var overDiscount = (totalPrice - (totalPrice * 40 / 100));
     overDiscount = overDiscount.toFixed(2);
-    console.log(overDiscount);
+    document.getElementById("price").innerText = (`Prezzo del biglietto: €${overDiscount}`);
 }
 else{
-    console.log(totalPrice);
+    document.getElementById("price").innerText = (`Prezzo del biglietto: €${totalPrice}`);
 }
