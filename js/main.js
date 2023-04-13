@@ -1,9 +1,13 @@
 var kmPrice = 0.21;
 var totalPrice = null;
 
-var age = prompt("Inserisci la tua età");
-var distance = prompt("Inserisci la distanza da percorrere");
-totalPrice = (Number(distance) * kmPrice)
+function givePrice(){
+    
+    var age = document.getElementById("age").value;
+    age = Number(age);
+    var distance = document.getElementById("distance").value;
+    age = Number(distance);
+    totalPrice = (Number(distance) * kmPrice)
 totalPrice = totalPrice.toFixed(2);
 if (age < 18) {
     var underDiscount = (totalPrice - (totalPrice * 20 / 100));
@@ -18,3 +22,7 @@ else if (age > 65) {
 else{
     document.getElementById("price").innerText = (`Prezzo del biglietto: €${totalPrice}`);
 }
+event.preventDefault()
+}
+
+
